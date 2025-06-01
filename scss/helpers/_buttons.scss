@@ -20,3 +20,15 @@
     letter-spacing: 0.7px;
     cursor: pointer;
 }
+
+%btnCard {
+    background-color: vars.$colorRed-pink;
+    color: vars.$colorWhite;
+    line-height: 17px;
+    letter-spacing: 0.7px;
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}

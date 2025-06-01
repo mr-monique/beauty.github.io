@@ -11,23 +11,23 @@
     background-color: vars.$colorRed-pink;
     color: vars.$colorWhite;  
 
- &__info {
-    position: relative;
-    z-index: 5;
+    &__info {
+        position: relative;
+        z-index: 5;
         padding: 192px 0 193px;
 
-        &-title {
-            font-size: 48px;
-            line-height: 44px;
-            font-weight: 700;
-            padding-bottom: 50px;
-        }
-        &-text {
-            line-height: 20px;
-            padding-bottom: 50px;
-        }
+            &-title {
+                font-size: 48px;
+                line-height: 44px;
+                font-weight: 700;
+                padding-bottom: 50px;
+            }
+            &-text {
+                line-height: 20px;
+                padding-bottom: 50px;
+            }
 
-        &-cta {
+            &-cta {
             @extend %btnHero;
 
             &:hover {
@@ -43,6 +43,59 @@
         &-image {
             position: absolute;
             width: 60%;
+        }
+    }
+}
+
+.goods {
+    width: 100%;
+    height: auto;
+    background-color: vars.$colorGrey;
+
+    &__title {
+        padding-top: 80px;
+
+        &-text {
+            font-size: 24px;
+            font-weight: 700px;
+            line-height: 29px;
+            color: vars.$colorBlack;
+        }
+    }
+
+    &__items {
+        padding: 38px 0 100px;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: vars.$colorWhite;
+
+        &-image {
+            padding: 25px 65px 20px;
+        }
+
+        &-name{
+            line-height: 141%;
+            color: vars.$colorDark;
+            padding: 0 47.5px;
+        }
+
+        &-price {
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 19px;
+            letter-spacing: 1.1px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        &-cta {
+            @extend %btnCard;
         }
     }
 }
