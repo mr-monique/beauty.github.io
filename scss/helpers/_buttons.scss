@@ -1,0 +1,22 @@
+@use './color' as vars;
+
+%btnHeader {
+    border: 2px solid vars.$colorRed-pink;
+    border-radius: 40px;
+    padding: 13px 56px;
+    background-color: vars.$colorWhite;
+    color: vars.$colorBlack;
+    line-height: 15px;
+    cursor: pointer;
+}
+
+%btnHero  {
+    border: 2px solid vars.$colorWhite;
+    border-radius: 40px;
+    padding: 13px 56px;
+    background-color: vars.$colorRed-pink;
+    color: vars.$colorWhite;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+}

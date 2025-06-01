@@ -1,1 +1,16 @@
 @use './responsive';
+
+
+@use 'sass:map';
+@use './helpers/fonts';
+@use './helpers/color';
+@use './helpers/mixins';
+@use './helpers/buttons';
+@use './helpers/inputs';
+@use './helpers/circle-line';
+
+
+@use './layout/body';
+@use './layout/header';
+@use './layout/main';
+@use './layout/footer';

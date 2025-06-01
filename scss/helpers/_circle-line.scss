@@ -1,0 +1,35 @@
+@use './color' as vars;
+
+%headerLine {
+    content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: vars.$colorGrey;
+            top: 0;
+            left: 0;
+}
+
+
+%heroCircle {
+    position: absolute;
+        width: fit-content;
+        width: 850px;
+        height: 850px;
+        background-color: vars.$colorPink;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -115px;
+        right: 300px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 700px;
+            height: 700px;
+            background-color: vars.$colorPink-white;
+            border-radius: 50%;
+        }
+}

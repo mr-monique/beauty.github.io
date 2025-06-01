@@ -1,0 +1,11 @@
+@use '../helpers/fonts';
+
+body {
+    @extend %fontMain;
+}
+
+.container {
+    width: 1110px;
+    height: auto;
+    margin: 0 auto;
+}

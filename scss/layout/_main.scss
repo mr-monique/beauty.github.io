@@ -1,0 +1,48 @@
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/circle-line';
+@use '../helpers/buttons';
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: vars.$colorRed-pink;
+    color: vars.$colorWhite;  
+
+ &__info {
+    position: relative;
+    z-index: 5;
+        padding: 192px 0 193px;
+
+        &-title {
+            font-size: 48px;
+            line-height: 44px;
+            font-weight: 700;
+            padding-bottom: 50px;
+        }
+        &-text {
+            line-height: 20px;
+            padding-bottom: 50px;
+        }
+
+        &-cta {
+            @extend %btnHero;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+            }
+        }
+    }
+
+    &__circle {
+        @extend %heroCircle;
+    
+        &-image {
+            position: absolute;
+            width: 60%;
+        }
+    }
+}

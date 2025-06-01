@@ -1,0 +1,145 @@
+@use '../helpers/fonts';
+@use '../helpers/color' as vars;
+@use '../helpers/circle-line';
+@use '../helpers/buttons';
+
+
+
+.header {
+    width: 100%;
+    height: auto;
+
+    &__submenu {
+        background-color: vars.$colorGrey;
+        padding: 17px 0 16px;
+
+        &-inner {
+            width: 1110px;
+            margin: 0 auto;
+        }
+
+        &-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        &-link {
+            position: relative;
+            display: inline-block;
+            color: vars.$colorDark;
+            line-height: 17px;
+            text-decoration: none;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: vars.$colorDark;
+                transition: width 0.3s ease;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-image:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+
+        }
+
+        &-title {
+            font-size: 36px;
+            line-height: 39px;
+            font-weight: 700;
+            letter-spacing: 3.6px;
+            color: vars.$colorRed-pink;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        &-phone {
+            color: vars.$colorBlack;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+        }
+
+        &-cta {
+            @extend %btnHeader;
+        }
+        &-cta:hover {
+            transform: scale(1.1);
+        transition: transform 0.3s ease;
+        }
+    }
+
+    &__menu {
+        position: relative;
+        padding: 30px 0;
+
+        &-inner {
+            width: 1110px;
+            margin: 0 auto;
+        }
+
+        &-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        &-link {
+            position: relative;
+            display: inline-block;
+            color: vars.$colorDark;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+            padding-bottom: 5px;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: vars.$colorDark;
+                transition: width 0.3s ease;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+            
+            &__border::after {
+            @extend %headerLine;
+        }
+}
